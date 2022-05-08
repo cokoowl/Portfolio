@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  
+
 }
 
 /* brand color palette */
@@ -8,7 +8,7 @@
   --white: white;
   --black: black;
   --grey: #5e5e5e;
-  --pink: #ff7878; 
+  --pink: #ff7878;
 }
 
 body {
@@ -18,12 +18,18 @@ body {
   font-size: 16px;
   background-image:
     radial-gradient(#212121 10%, transparent 20%);
-    background-position:fixed;
+  /* background-position: fixed; */
   background-color: var(--black);
   background-size: 20px 20px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -33,17 +39,13 @@ h1 {
   font-weight: 100;
 }
 
-h3 {
-font-size: 125%;
-}
-
 .highlight {
   color: var(--pink);
   font-size: 50%;
 }
 
 header {
-  padding: 4% 4% 4% 0;
+  padding: 20px 20px 20px 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -63,65 +65,60 @@ nav a:hover {
   text-decoration-style: wavy;
 }
 
-/* main {
-  margin: 5% auto 5% auto;
-  max-width: 88%;
-} */
+a {
+  color: var(--white);
+  text-decoration: none;
+}
 
+main {
+  margin: 24px 60px 60px 60px;
+}
 
-/* 
-.page-section {
-  margin: 25px 0;
-  padding: 10px 0;
+.section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.page-section>div {
-  flex: 0 0 88%;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
+  justify-content: space-around;
+  padding-bottom: 5%;
 }
 
 .flex-item {
-  color: var(--white);
-  min-height: 150px;
-  max-height: 150px;
+  padding: 8px;
+  max-width: 100%;
+  flex-grow: 0;
+  border: .5px solid white;
+  border-radius: 6px;
+}
+
+.row {
   display: flex;
-  align-items: flex-start;
-  padding: 0 0 8px 0;
-  margin: 0.5em;
-  text-decoration: none;
-  background-blend-mode: soft-light;
-  background-size: 150%;
-  transition: all 0.5s;
-  font-size: 100%;
-  flex: 0 0 1;
-} */
+  flex-direction: row;
+}
 
+.col {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
 
+.flex-item:hover {
+  /* background-color: aqua; */
+border: 1px solid var(--pink);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
 
 /* feature first portfolio item */
 .flex-item:first-child {
-  min-height: 400px;
-  /* flex-basis: 100%; */
-  /* object-fit: cover; */
+flex-grow: 1;
 }
 
-/* .flex-item:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-} */
 
-/* .flex-item div {
-  padding: 8px 10px;
-} */
-
+/* footer items */
 address {
   display: flex;
   flex-wrap: wrap;
@@ -153,70 +150,27 @@ footer p {
   font-style: normal;
 }
 
+#legal {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  font-size: 80%;
+}
+
 img {
-  /* object-fit: contain; */
-  max-width: 88%;
-} */
-         
-/* portfolio project images */
-/* .p5Project {
-  background-image: url(https://via.placeholder.com/370x296);
+  width: 100%;
+  height: auto;
 }
 
-.p4Project {
-  background-image: url(https://via.placeholder.com/370x296);
-}
-
-.p3Project {
-  background-image: url(https://via.placeholder.com/370x296);
-}
-
-.p2Project {
-  background-image: url(https://via.placeholder.com/370x296);
-} */
-
-/* .p1Project {
-  background-image: url(images/wip1.jpg);
-} */
 
 /* end portfolio project images */
 
-/* @media screen and (max-width: 980px) {
-  header {
-    padding: 0 0 10px 0;
-    justify-content: center;
-    text-align: center;
-  }
-
-  header h1 {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    font-size: 10vw;
-  }
-
-  header nav {
-    justify-content: center;
-  }
-
-  .page-section > h2,
-  .page-section > div {
-    flex: 0 0 100%;
-  }
-
-  .page-section > h2 {
-    border-right: none;
-    border-bottom: 4px solid var(--primary);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    text-align: left;
-    font-size: 7vw;
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .flex-item,
-  .flex-item:first-child {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .col:first-child {
     flex-basis: 100%;
   }
 
@@ -224,13 +178,18 @@ img {
     min-height: 150px;
   }
 
-  .hero-banner {
-    justify-content: center;
-    text-align: center;
+  h1 {
+    font-size: 180%;
+    font-weight: 100;
   }
 
-  .contact address {
-    flex-direction: column;
-    align-items: flex-start;
+  main {
+    margin: 24px 16px 16px 16px;
   }
-} */
+
+  address {
+    flex-direction: column-reverse;
+    align-content: center;
+    text-align: center;
+}
+}
